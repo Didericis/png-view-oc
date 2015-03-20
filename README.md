@@ -1,6 +1,6 @@
-# pngOC
+# png-view
 An opencomputer png downloader/decoder/renderer
 
 Usage:
 
-    pngOC [url] [x] [y]
+    png-view [url] [x] [y]
