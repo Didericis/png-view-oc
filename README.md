@@ -1,2 +1,6 @@
 # pngOC
-An opencomputer png donwloader/decoder/renderer
+An opencomputer png downloader/decoder/renderer
+
+Usage:
+
+    pngOC [url] [x] [y]
