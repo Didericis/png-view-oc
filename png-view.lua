@@ -4,7 +4,7 @@ local internet = require("internet")
 local fs = require("filesystem") 
 local gpu = component.gpu
 local w, h = gpu.getResolution()
-local png = require("png-lib")
+local png = require("png")
 
 local args = {...}
 local url = args[1] or "http://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/03/Grid_Cobblestone.png?version=9c40e554c7fedeb09915273311398b2f"
