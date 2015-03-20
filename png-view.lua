@@ -25,13 +25,13 @@ local function draw(img)
     local x = 0
     local y = 0
     for rowNum = 1, img.height do
-        x = rowNum + startX - 1
-        if ((x%2) == 0) then
+        y = rowNum + startY - 1
+        if ((y%2) == 0) then
             for pixelNum = 1, img.width do
-                y = pixelNum + startY - 1
-                gpu.setForeground(img:getPixel(rowNum-1, pixelNum):toHex())
-                gpu.setBackground(img:getPixel(rowNum, pixelNum):toHex())
-                gpu.fill(x, y, 1, 1, "▀")
+                x = pixelNum + startX - 1
+                gpu.setForeground(img:getPixel(pixelNum, rowNum-1):toHex())
+                gpu.setBackground(img:getPixel(pixelNum, rowNum):toHex())
+                gpu.fill(x, y/2, 1, 1, "▀")
             end
         end
     end
