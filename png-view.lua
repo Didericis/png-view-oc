@@ -22,10 +22,17 @@ end
 
 local function draw(img)
     clear()
-    for i = 1, img.height do
-        if ((i%2) == 0) then
-            gpu.setForeground(img.getPixel[i-1]:toHex())
-            gpu.setBackground(img.getPixel[i]:toHex())
+    local x = 0
+    local y = 0
+    for rowNum = 1, img.height do
+        x = rowNum + startX - 1
+        if ((x%2) == 0) then
+            for pixelNum = 1, img.width do
+                y = pixelNum + startY - 1
+                gpu.setForeground(img:getPixel(rowNum-1, pixelNum):toHex())
+                gpu.setBackground(img:getPixel(rowNum, pixelNum):toHex())
+                gpu.fill(x, y, 1, 1, "▀")
+            done
         end
     end
     resetPalette()
