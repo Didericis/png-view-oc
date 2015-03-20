@@ -32,7 +32,7 @@ local function draw(img)
                 gpu.setForeground(img:getPixel(rowNum-1, pixelNum):toHex())
                 gpu.setBackground(img:getPixel(rowNum, pixelNum):toHex())
                 gpu.fill(x, y, 1, 1, "▀")
-            done
+            end
         end
     end
     resetPalette()
